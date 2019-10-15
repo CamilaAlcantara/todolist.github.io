@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+/**
+ *criação do component de listar as tarefas.
+ * 
+ *@author Camila M. Alcantara <camilamariana19@gmail.com>
+ *@since 1.0.0  
+ */
 
+import { Component, OnInit } from '@angular/core';
 import { TarefaService, Tarefa } from '../shared';
 
 @Component({
@@ -14,7 +20,7 @@ export class ListarTarefaComponent implements OnInit {
   constructor(private tarefaService: TarefaService) { 
 
   }
-
+  
   ngOnInit() {
     this.tarefas = this.listarTodos();
    /* this.tarefas = [
@@ -23,16 +29,25 @@ export class ListarTarefaComponent implements OnInit {
     ];*/
   }
 
+
+
     listarTodos(): Tarefa[]{
       return this.tarefaService.listarTodos();
     }
-    remover($event: any, tarefa: Tarefa): void{
-      $event.preventDefaut();
-      if(confirm('Deseja remover a tarefa"'+ tarefa.nome+'"?')){
+    remover($event: any, tarefa: Tarefa): void {
+      $event.preventDefault();
+      if (confirm('Deseja remover a tarefa "' + tarefa.nome + '"?')) {
         this.tarefaService.remover(tarefa.id);
         this.tarefas = this.tarefaService.listarTodos();
-     }
+      }
     }
+    alterarStatus(tarefa: Tarefa): void {
+      if (confirm('Deseja alterar o status da tarefa "' + tarefa.nome + '"?')) {
+        this.tarefaService.alterarStatus(tarefa.id);
+        this.tarefas = this.tarefaService.listarTodos();
+      }
+    }
+
 
 }
 

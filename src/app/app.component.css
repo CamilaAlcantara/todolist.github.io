@@ -1,0 +1,17 @@
+a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+#header{
+width: 100%;
+background-color: black !important;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    /*margin-right: auto;
+    margin-left: auto;*/
+}

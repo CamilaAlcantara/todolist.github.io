@@ -1,3 +1,9 @@
+/**
+ *criação do component de editar as tarefas.
+ * 
+ *@author Camila M. Alcantara <camilamariana19@gmail.com>
+ *@since 1.0.0  
+ */
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { Router , ActivatedRoute} from '@angular/router';
 import { NgForm } from '@angular/forms';

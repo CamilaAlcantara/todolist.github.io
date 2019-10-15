@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TarefasModule } from './tarefas';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -13,9 +14,13 @@ import { TarefasModule } from './tarefas';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TarefasModule
+    TarefasModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+
+}
