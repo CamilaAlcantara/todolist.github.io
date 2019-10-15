@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { ListarTarefaComponent } from './listar';
 import { CadastrarTarefasComponent } from './cadastrar';
-import { EditarTarefasComponent } from './editar-tarefas/editar-tarefas.component';
+import { EditarTarefasComponent } from './editar';
 
 
 
